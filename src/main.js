@@ -160,7 +160,7 @@ const checkUpi = /* #__PURE__ */ (function () {
         return new Promise((resolve) => {
             const spinner = ora(`Checking ${upi}`).start();
             instance
-                .post(`https://upibankvalidator.com/api/upiValidation?upi=${upi}`)
+                .post(`https://paydigi.airtel.in/web/pg-service/v1/validate/vpa/${upi}`)
                 .then((response) => {
                     const { data } = response;
 
